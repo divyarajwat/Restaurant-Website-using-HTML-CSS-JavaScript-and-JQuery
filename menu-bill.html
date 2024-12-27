@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <script src="jquery-3.7.1.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".divya1").mouseover(function(){
+                $(this).animate({
+                    width: "320px",
+                    height: "320px",
+                    borderRadius: "50%"
+                });
+            });
+            $(".divya1").mouseleave(function(){
+                $(this).animate({
+                    width: "300px",
+                    height: "300px",
+                    borderRadius: "20px",
+                });
+            
+        });
+    });
+    </script>
+    <style>
+        body {
+            background-image: url(back1.jpg);
+            /* background-repeat: no-repeat; */
+            background-size: cover;
+     background-position: center center ;
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+     filter: brightness(80%);
+            /* background-repeat: round; */
+        }
+
+        .heading {
+            color: darkblue;
+            font-weight: 800;
+            margin-left: 400px;
+            font-size: 50px;
+            font-style: italic;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .menu-container {
+            display: grid;
+            
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 10px;
+            justify-items: center;
+        }
+
+        .menu-item {
+            width: 300px;
+            /* background-color: #cfc6c6; */
+            /* background-image: linear-gradient(90deg,rgb(50, 65, 50), rgb(17, 34, 17),rgb(32, 32, 43),rgb(58, 58, 103));  */
+            background-image: linear-gradient(45deg,pink, purple,violet);
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .menu-item img {
+            width: 100%;
+            height: 250px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        .item-details {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .item-name {
+            font-size: 21px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .item-price {
+            color: white;
+            font-size: 21px;
+        }
+
+        .bill-section {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 20px;
+            font-style: italic;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: rgb(255, 255, 255);
+        }
+
+        .bill-section input[type="button"] {
+            padding: 10px 20px;
+            font-size: 20px;
+            cursor: pointer;
+            font-style: italic;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: peachpuff;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            margin-right: 10px; /* Space between buttons */
+        }
+
+        .bill-section input[type="text"] {
+            margin-top: 10px;
+            padding: 10px;
+            font-size: 18px;
+            font-style: italic;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            width: 150px;
+            text-align: center;
+            border: 1.5px solid #181616;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="heading">Our Menu !!<br></p>
+
+    <div class="menu-container">
+        <div class="menu-item">
+            <img src="img.jpg" alt="Cheese Taco" class="divya1">
+            <div class="item-details">
+                <div>
+                    <p class="item-name">Burger</p>
+                    <p class="item-price">Rs.150</p>
+                </div>
+                <input type="checkbox" id="c1">
+            </div>
+        </div>
+        <div class="menu-item">
+            <img src="img2.jpg" alt="Chilli Potato" class="divya1">
+            <div class="item-details">
+                <div>
+                    <p class="item-name">Rolls</p>
+                    <p class="item-price">Rs.200</p>
+                </div>
+                <input type="checkbox" id="c2">
+            </div>
+        </div>
+        <div class="menu-item">
+            <img src="chole-bhatura.jpg" alt="Italian Pasta" class="divya1">
+            <div class="item-details">
+                <div>
+                    <p class="item-name">chole-bhatura</p>
+                    <p class="item-price">Rs.150</p>
+                </div>
+                <input type="checkbox" id="c3">
+            </div>
+        </div>
+        <div class="menu-item">
+            <img src="img4.jpg" alt="Kabab" class="divya1 ">
+            <div class="item-details">
+                <div>
+                    <p class="item-name">Chowmein</p>
+                    <p class="item-price">Rs.100</p>
+                </div>
+                <input type="checkbox" id="c4">
+            </div>
+        </div>
+        <div class="menu-item">
+            <img src="img5.jpg" alt="Shawarma" class="divya1">
+            <div class="item-details">
+                <div>
+                    <p class="item-name">Pizza</p>
+                    <p class="item-price">Rs.250</p>
+                </div>
+                <input type="checkbox" id="c5">
+            </div>
+        </div>
+        <div class="menu-item">
+            <img src="img6.jpg" alt="Chole Bhatura" class="divya1">
+            <div class="item-details">
+                <div>
+                    <p class="item-name">Red Sauce Pasta</p>
+                    <p class="item-price">Rs.170</p>
+                </div>
+                <input type="checkbox" id="c6">
+            </div>
+        </div>
+        <div class="menu-item">
+            <img src="img7.jpg" alt="Dosa" class="divya1">
+            <div class="item-details">
+                <div>
+                    <p class="item-name">White Sauce Pasta</p>
+                    <p class="item-price">Rs.170</p>
+                </div>
+                <input type="checkbox" id="c7">
+            </div>
+        </div>
+        <div class="menu-item">
+            <img src="img8.jpg" alt="Sandwich" class="divya1">
+            <div class="item-details">
+                <div>
+                    <p class="item-name">Hakka Noodles</p>
+                    <p class="item-price">Rs.200</p>
+                </div>
+                <input type="checkbox" id="c8">
+            </div>
+        </div>
+        <div class="menu-item">
+            <img src="img9.jpg" alt="Pancakes" class="divya1">
+            <div class="item-details">
+                <div>
+                    <p class="item-name">Soup</p>
+                    <p class="item-price">Rs.150</p>
+                </div>
+                <input type="checkbox" id="c9">
+            </div>
+        </div>
+        <div class="menu-item">
+            <img src="img10.jpg" alt="Cheese Taco" class="divya1">
+            <div class="item-details">
+                <div>
+                    <p class="item-name">Shawarma</p>
+                    <p class="item-price">Rs.150</p>
+                </div>
+                <input type="checkbox" id="c10">
+            </div>
+        </div>
+        <div class="menu-item">
+            <img src="img11.jpg" alt="Chilli Potato" class="divya1">
+            <div class="item-details">
+                <div>
+                    <p class="item-name">Sandwich</p>
+                    <p class="item-price">Rs.120</p>
+                </div>
+                <input type="checkbox" id="c11">
+            </div>
+        </div>
+        <div class="menu-item">
+            <img src="img12.jpg" alt="Italian Pasta" class="divya1">
+            <div class="item-details">
+                <div>
+                    <p class="item-name">Brownie</p>
+                    <p class="item-price">Rs.190</p>
+                </div>
+                <input type="checkbox" id="c12">
+            </div>
+        </div>
+        <div class="menu-item">
+            <img src="img13.jpg" alt="Kabab" class="divya1">
+            <div class="item-details">
+                <div>
+                    <p class="item-name"><Ice-Cream></Ice-Cream></p>
+                    <p class="item-price">Rs.100</p>
+                </div>
+                <input type="checkbox" id="c13">
+            </div>
+        </div>
+        <div class="menu-item">
+            <img src="img14.jpg" alt="Shawarma" class="divya1">
+            <div class="item-details">
+                <div>
+                    <p class="item-name">Maggie</p>
+                    <p class="item-price">Rs.90</p>
+                </div>
+                <input type="checkbox" id="c14">
+            </div>
+        </div>
+        <div class="menu-item">
+            <img src="img15.jpg" alt="Chole Bhatura" class="divya1">
+            <div class="item-details">
+                <div>
+                    <p class="item-name">Dosa</p>
+                    <p class="item-price">Rs.150</p>
+                </div>
+                <input type="checkbox" id="c15">
+            </div>
+        </div>
+        <div class="menu-item">
+            <img src="img16.jpg" alt="Dosa" class="divya1">
+            <div class="item-details">
+                <div>
+                    <p class="item-name">Idli Sambhar</p>
+                    <p class="item-price">Rs.150</p>
+                </div>
+                <input type="checkbox" id="c16">
+            </div>
+        </div>
+        <div class="menu-item">
+            <img src="img17.jpg" alt="Sandwich" class="divya1">
+            <div class="item-details">
+                <div>
+                    <p class="item-name">Khaman</p>
+                    <p class="item-price">Rs.100</p>
+                </div>
+                <input type="checkbox" id="c17">
+            </div>
+        </div>
+        <div class="menu-item">
+            <img src="img18.jpg" alt="Pancakes" class="divya1">
+            <div class="item-details">
+                <div>
+                    <p class="item-name">Samosa</p>
+                    <p class="item-price">Rs.50</p>
+                </div>
+                <input type="checkbox" id="c18">
+            </div>
+        </div>
+        <div class="menu-item">
+            <img src="img19.jpg" alt="Cheese Taco" class="divya1">
+            <div class="item-details">
+                <div>
+                    <p class="item-name">Kachori</p>
+                    <p class="item-price">Rs.50</p>
+                </div>
+                <input type="checkbox" id="c19">
+            </div>
+        </div>
+        <div class="menu-item">
+            <img src="img20.jpg" alt="Chilli Potato" class="divya1">
+            <div class="item-details">
+                <div>
+                    <p class="item-name">Desserts</p>
+                    <p class="item-price">Rs.150</p>
+                </div>
+                <input type="checkbox" id="c20">
+            </div>
+        </div>
+        <div class="menu-item">
+            <img src="img21.jpg" alt="Italian Pasta" class="divya1">
+            <div class="item-details">
+                <div>
+                    <p class="item-name">Pancakes</p>
+                    <p class="item-price">Rs.190</p>
+                </div>
+                <input type="checkbox" id="c21">
+            </div>
+        </div>
+        <div class="menu-item">
+            <img src="img22.jpg" alt="Kabab" class="divya1">
+            <div class="item-details">
+                <div>
+                    <p class="item-name">Paratha</p>
+                    <p class="item-price">Rs.100</p>
+                </div>
+                <input type="checkbox" id="c22">
+            </div>
+        </div>
+        <div class="menu-item">
+            <img src="img23.jpg" alt="Shawarma" class="divya1">
+            <div class="item-details">
+                <div>
+                    <p class="item-name">Poha</p>
+                    <p class="item-price">Rs.50</p>
+                </div>
+                <input type="checkbox" id="c23">
+            </div>
+        </div>
+        <div class="menu-item">
+            <img src="img24.jpg" alt="Chole Bhatura" class="divya1">
+            <div class="item-details">
+                <div>
+                    <p class="item-name">Spring Roll</p>
+                    <p class="item-price">Rs.100</p>
+                </div>
+                <input type="checkbox" id="c24">
+            </div>
+        </div>
+        <div class="menu-item">
+            <img src="img25.jpg" alt="Dosa" class="divya1">
+            <div class="item-details">
+                <div>
+                    <p class="item-name">Manchurian</p>
+                    <p class="item-price">Rs.200</p>
+                </div>
+                <input type="checkbox" id="c25">
+            </div>
+        </div>
+        <div class="menu-item">
+            <img src="img26.jpg" alt="Sandwich" class="divya1">
+            <div class="item-details">
+                <div>
+                    <p class="item-name">Fried-Rice</p>
+                    <p class="item-price">Rs.150</p>
+                </div>
+                <input type="checkbox" id="c26">
+            </div>
+        </div>
+        <div class="menu-item">
+            <img src="img27.jpg" alt="Pancakes" class="divya1">
+            <div class="item-details">
+                <div>
+                    <p class="item-name">Cakes</p>
+                    <p class="item-price">Rs.250</p>
+                </div>
+                <input type="checkbox" id="c27">
+            </div>
+        </div>
+    </div>
+    <div class="bill-section">
+        <input type="button" value="Calculate Bill" id="b1" onclick="bill()" onclick="a()">
+        <input type="button" value="Clear Bill" id="b2" onclick="clearBill()">
+        <div>
+            <label for="total-bill">Total Bill =</label>
+            <input type="text" id="total-bill" readonly>
+        </div>
+    </div>
+
+    <script>
+        function bill() {
+            let amt = 0;
+            if (document.getElementById('c1').checked) amt += 150;
+            if (document.getElementById('c2').checked) amt += 200;
+            if (document.getElementById('c3').checked) amt += 150;
+            if (document.getElementById('c4').checked) amt += 100;
+            if (document.getElementById('c5').checked) amt += 250;
+            if (document.getElementById('c6').checked) amt += 170;
+            if (document.getElementById('c7').checked) amt += 170;
+            if (document.getElementById('c8').checked) amt += 200;
+            if (document.getElementById('c9').checked) amt += 150;
+
+            if (document.getElementById('c10').checked) amt += 150;
+            if (document.getElementById('c11').checked) amt += 120;
+            if (document.getElementById('c12').checked) amt += 190;
+            if (document.getElementById('c13').checked) amt += 100;
+            if (document.getElementById('c14').checked) amt += 90;
+            if (document.getElementById('c15').checked) amt += 150;
+            if (document.getElementById('c16').checked) amt += 150;
+            if (document.getElementById('c17').checked) amt += 100;
+            if (document.getElementById('c18').checked) amt += 50;
+
+            if (document.getElementById('c19').checked) amt += 50;
+            if (document.getElementById('c20').checked) amt += 150;
+            if (document.getElementById('c21').checked) amt += 190;
+            if (document.getElementById('c22').checked) amt += 100;
+            if (document.getElementById('c23').checked) amt += 50;
+            if (document.getElementById('c24').checked) amt += 100;
+            if (document.getElementById('c25').checked) amt += 200;
+            if (document.getElementById('c26').checked) amt += 150;
+            if (document.getElementById('c27').checked) amt += 250;
+
+
+            document.getElementById('total-bill').value = `Rs. ${amt}`;
+            alert(`your total amount is: Rs.${amt} `);
+        }
+
+        function clearBill() {
+            // Clear all checkboxes
+            document.getElementById('c1').checked = false;
+            document.getElementById('c2').checked = false;
+            document.getElementById('c3').checked = false;
+            document.getElementById('c4').checked = false;
+            document.getElementById('c5').checked = false;
+            document.getElementById('c6').checked = false;
+            document.getElementById('c7').checked = false;
+            document.getElementById('c8').checked = false;
+            document.getElementById('c9').checked = false;
+
+            document.getElementById('c10').checked = false;
+            document.getElementById('c11').checked = false;
+            document.getElementById('c12').checked = false;
+            document.getElementById('c13').checked = false;
+            document.getElementById('c14').checked = false;
+            document.getElementById('c15').checked = false;
+            document.getElementById('c16').checked = false;
+            document.getElementById('c17').checked = false;
+            document.getElementById('c18').checked = false;
+
+            document.getElementById('c19').checked = false;
+            document.getElementById('c20').checked = false;
+            document.getElementById('c21').checked = false;
+            document.getElementById('c22').checked = false;
+            document.getElementById('c23').checked = false;
+            document.getElementById('c24').checked = false;
+            document.getElementById('c25').checked = false;
+            document.getElementById('c26').checked = false;
+            document.getElementById('c27').checked = false;
+             
+            
+            // Clear the total bill
+            document.getElementById('total-bill').value = '';
+        }
+       
+    </script>
+</body>
+
+</html>

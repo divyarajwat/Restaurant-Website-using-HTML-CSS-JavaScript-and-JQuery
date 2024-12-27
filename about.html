@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Kitchen</title>
+    <script src="jquery-3.7.1.js"></script>
+    <script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $("p").slideToggle("slow");
+    })
+    $(".imagebx").mouseover(function(){
+        $("#img3").animate({
+            width: "700px",
+            height: "500px",
+            borderRadius: "50%",
+            
+        });
+    });
+    $(".imagebx").mouseleave(function(){
+        $("#img3").animate({
+            width: "600px",
+            height: "500px",
+            borderRadius: "0%",
+            
+            
+        });
+    });
+    $(".imagebx").mouseover(function(){
+        $("body").css("background-image", "linear-gradient(red, pink, violet)");
+    });
+    $(".imagebx").mouseleave(function(){
+        $("body").css("background-image", "linear-gradient(white, white, white)");
+    });
+
+});
+    </script>
+    <style>
+                              /* about section */
+*{
+    box-sizing: border-box;
+    overflow: hidden;
+}
+                              
+.about
+{
+    padding: 100px;
+}
+.about .row
+{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.about .row .col50
+{
+    position: relative;
+    width: 48%;
+}
+.about .titletext
+{
+    color: #000;
+    font-size: 3em;
+    font-weight: 500;
+    margin-top: 30px;
+}
+.about .titletext span
+{
+    /* margin-top: 10px; */
+    color: #ff0157;
+    font-size: 5em;
+    font-weight: 800;
+}
+.about p
+{
+    font-size: 1.3em;
+    font-weight: 400;
+    /* margin-top: 20px; */
+    text-align: left;
+}
+.about .col50 .imagebx
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    box-Shadow: "0px 0px 3px black",
+}
+.about .col50 .imagebx img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+#link1{
+        font-size: xx-large;
+        width: 20px;
+        /* height: 20px; */
+        /* margin-top: 50px; */
+        }
+        #link1:hover{
+            background-color: antiquewhite;
+            box-shadow: 3px 3px 3px burlywood;
+            background-size: cover;
+            /* color: aqua; */
+
+        }
+        #link2{
+            font-size: xx-large;
+            margin-left: 10px;
+
+        }
+        #link2:hover{
+            box-shadow: 3px 3px 3px burlywood;
+            background-color: antiquewhite;
+        }
+    </style>
+    
+</head>
+<body>
+    
+
+                        <!-- about section -->
+                        
+    <section class="about" id="about">
+        <div class="row">
+            <div class="col50">
+                <h3 class="titletext"><span>A</span>bout Us</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa saepe maiores doloremque ratione deserunt veritatis id odit quae, fugit inventore laboriosam .</p>
+
+                <p>Nulla inventore minima accusamus tenetur cupiditate. Nostrum distinctio, repudiandae minima ad eligendi sequi obcaecati enim nisi. Sunt possimus enim.</p>
+
+                <button style="width: 70px; height: fit-content;">click Me!!</button>
+                <a href="chef.html" id="link1"><img src="leftA.png"  width="25px"></a><a href="slideshow.html" id="link2"><img src="rightA.png" width="25px"></a>
+            </div>
+            <div class="col50">
+                <div class="imagebx">
+                    <img src="about.jpg" alt="" id="img3">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('scroll', function()
+        {
+            var header = document.querySelector('header');
+            header.classList.toggle('sticky', window.scrollY > 0);
+        })
+
+        function toggles()
+        {
+            var header = document.querySelector("header");
+            header.classList.toggle("active");
+
+            var toggle = document.querySelector(".menuToggle");
+            toggle.classList.toggle("active");
+        }
+    </script>     
+
+                 
+   
+</body>
+</html>

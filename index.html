@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
+
+
+
+    <title>Project</title>
+    <script src="jquery-3.7.1.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("a").mouseover(function(){
+                $("#divya").animate({
+                    width: "100px",
+                    height: "50px",
+                });
+                $("a").mouseover(function(){
+                    $("#divya").css("padding-top","5px");
+                });
+           
+            $("#hero_content").mouseover(function(){
+                $("h1").css("font-size", "5em");
+                $("h1").css("color","red");
+            });
+        });
+        $("#hero_content").mouseleave(function(){
+                $("h1").css("font-size", "3em");
+                $("h1").css("color", "white");
+            });
+            // $("#navbar").mouseover(function(){
+                // $("ul").animate({
+                    // width: "100px",
+                    // height: "50px",
+                // });
+            // });
+        });
+    </script>
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+    font-size: 100%;
+}
+body{
+    font-family:'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+/* hero section */
+#hero{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+#hero::before{
+    content: "";
+    position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background-image: url(hero.jpeg);
+     background-size: cover;
+     background-position: center center ;
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+     filter: brightness(50%);
+    }
+    #hero_content{
+        position: absolute;
+
+    }
+    #hero_content h1{
+        color: #fff;
+        font-size: 2.8rem;
+        text-shadow: 2px 2px 2px #000;
+    }
+    #hero_content h2{
+        color: #fff;
+        font-size: 2rem;
+        font-family: cursive;
+        margin-top: 1rem;
+        margin-bottom: 4rem;
+        text-shadow: 2px 2px 2px #0000;
+
+    }
+    #hero_content a{
+        color: #fff;
+        padding: 5px 20px 5px 20px;
+        border: 1px solid orange;
+        background: rgb(0,0,0,0.6);
+        font-size: 1.5rem;
+        text-decoration: none;
+        border-radius: 25px;
+    }
+    #hero_content a:hover{
+        background: navy;
+    }
+    /* header section */
+    #header{
+        position: fixed;
+        top: 0;
+        width: 100vw;
+        height: 70px;
+        line-height: 70px;
+    }
+    #navbar{
+        display: flex;
+        justify-content: space-around;
+        background: rgb(0, 0, 0, 0.5) ;
+    }
+    #navbar h1{
+        color: orange;
+        font-size: 1.8rem;
+        text-shadow: 2px 2px 2px #000;
+        /* display: flex; */
+        font-family: cursive;
+        /* justify-content: space-around; */
+
+    }
+    #navbar ul{
+        display: flex;
+    
+    }
+    #navbar ul li{
+        list-style: none;
+        padding: 3px 15px 3px 15px;
+    }
+    #navbar ul li:hover , #phone a:hover , #mobile_menu ul li:hover{
+        background: navy;
+        cursor: pointer;
+    }
+    #navbar ul li a{
+        text-decoration: none;
+        color: #fff;
+        font-size: 1.1rem;
+    }
+    #phone a{
+        text-decoration: none;
+        color: #fff;
+        font-size: 1.1rem;
+        padding: 3px 15px 3px 15px;
+        border: 1px solid orange;
+    }
+    #mobile_menu{
+        display: none;
+        height: 40px;
+        /* width: ; */
+        line-height: 40px;
+        background-color: magenta ;
+
+    }
+    #mobile_menu ul{
+        display: flex;
+        justify-content: center;
+    }
+    #mobile_menu ul li{
+        list-style: none;
+        padding: 0 5px 0 5px;
+    }
+    #mobile_menu ul li a{
+        text-decoration: none;
+        color: #fff;
+    }
+
+
+
+
+
+   
+
+    </style>
+</head>
+<body onload="setInterval(text,2000)">
+    <div class="container-fluid">    <!-- hero section begin   -->
+   <div id="hero">
+    <div id="hero_content">
+        <h1>Divu Restaurant</h1>
+        <h2>Best Quality and Tasty Food Points</h2>
+        <a href="menu.html" id="divya">Menu</a>
+    
+    </div>
+       </div>
+       <!-- hero section end -->
+    <!-- header section -->
+     <div id="header">
+        <nav id="navbar">
+            <h1>Divu Restaurant</h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                 <li><a href="menu.html">Menu</a></li>
+                 <li><a href="chef.html">Chef</a></li>
+                 <li><a href="about.html">About</a></li>
+                 <li><a href="slideshow.html">Images</a></li>
+                 <li><a href="testimonials.html">Testimonials</a></li>
+                 <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div id="phone">
+                <a href="tel:+12121132354">+12121132354</a>
+            </div>
+    
+        </nav>
+        <div id="mobile_menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                 <li><a href="menu.html" >Menu</a></li>
+                 <li><a href="chef.html">Chef</a></li>
+                 <li><a href="about.html">About</a></li>
+                 <li><a href="slideshow.html">Images</a></li>
+                 <li><a href="testimonials.html">Testimonials</a></li>
+                 <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+     </div>
+    </div>
+
+</body>
+</html>

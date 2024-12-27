@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Kitchen</title>
+    <script src="jquery-3.7.1.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".inputboxes").click(function(){
+                $(".contactform").css("background-image","linear-gradient(45deg,pink,purple,violet)");
+            });
+        });
+    </script>
+    <style>
+        /* *{
+            padding: 0px;
+            margin: 0px;
+        } */
+                        /* contact section */
+.contact
+{
+    padding: 100px;
+    background: url("con-bg.jpg");
+    /* background-size: cover; */
+    background-size:cover;
+}
+.contact .title
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.contact .title h2
+{
+    color: #000;
+    font-size: 3em;
+    font-weight: 500;
+}
+.contact .title h2 span
+{
+    color: #ff0157;
+    font-size: 3em;
+    font-weight: 800;
+}
+.contact .title p
+{
+    color: #000;
+}
+.contact .contactform
+{
+    padding: 75px 50px;
+    background: #fff;
+    max-width: 500px;
+    margin-top: 50px;
+    box-shadow: 0 15px 30px #000;
+    border-radius: 3px;
+}
+.contact .contactform h3
+{
+    color: #000;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+.contact .contactform .inputboxes
+{
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.contact .contactform .inputboxes input,
+.contact .contactform .inputboxes textarea
+{
+    width: 100%;
+    border: 1px solid #555;
+    padding: 10px;
+    color: #000;
+    outline: none;
+    font-size: 16px;
+    resize: none;
+}
+.contact .contactform .inputboxes input[type="submit"]
+{
+    font-size: 1em;
+    background-color: #ff0157;
+    color: #fff;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    max-width: 100px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition-duration: 0.5s;
+    border-radius: 50px;
+}
+.contact .contactform .inputboxes input[type="submit"]:hover
+{
+    color: black;
+    transform: scale(1.1);
+}
+.copyright
+{
+    text-align: center;
+    padding: 15px 40px;
+    border-top: 1px solid lightgray;
+}
+.copyright p
+{
+    font-size: 14px;
+    font-weight: 500;
+}
+.copyright p span
+{
+    font-size: 1.2em;
+    color: #ff0157;
+    margin: 3px;
+    font-weight: bold;
+}
+#link1{
+        font-size: xx-large;
+        width: 20px;
+        /* height: 20px; */
+        margin-top: 50px;
+        }
+        #link1:hover{
+            /* background-color: burlywood; */
+            box-shadow: 3px 3px 3px burlywood;
+            background-size: cover;
+            /* color: aqua; */
+
+        }
+        #link2{
+            font-size: xx-large;
+            margin-left: 1480px;
+
+        }
+        #link2:hover{
+            box-shadow: 3px 3px 3px burlywood;
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+    
+                        <!-- contact section -->
+                        <a href="testimonials.html" id="link1"><img src="leftA.png"  width="25px"></a><a href="index.html" id="link2"><img src="rightA.png" width="25px"></a>
+     <section class="contact" id="contact">
+        <div class="title">
+            <h2 class="titletext"><span>C</span>ontact us</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, accusamus.</p>
+        </div>
+        <div class="contactform">
+            <h3>Send Message</h3>
+            <div class="inputboxes">
+                <input type="text" placeholder="Name">
+            </div>
+            <div class="inputboxes">
+                <input type="text" placeholder="Email">
+            </div>
+            <div class="inputboxes">
+                <textarea placeholder="Your Message"></textarea>
+            </div>
+            <div class="inputboxes">
+                <input type="submit" value="Send" onclick="a()">
+            </div>
+        </div>
+    </section>
+    <div class="copyright">
+        <p>&copy Copyright 2k24 <span>DIVYA RAJAWAT</span> all rights reserved.</p>
+    </div>
+    <script>
+        function a(){
+            alert("ThankYou User!!! your details has been sent to us");
+        }
+        </script>
+
+
+
+
+    
+</body>
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".slideshow-container").mouseover(function(){
+                $("body").css("background-image", "linear-gradient(95deg,pink,purple,violet)");
+            });
+            $(".slideshow-container").mouseover(function(){
+                $("h2").css("background-color", "blue");
+                $("h2").css("border","5px solid violet");
+                $("h2").animate({
+                    fontSize:"7em",
+                });
+            });
+            $("p").mouseover(function(){
+              $("p").css("box-shadow", "3px 3px 3px 3px black");
+              $("p").css("background-color","transparent");
+              $("p").css("margin-left","20px")
+              $("p").css("width", "fit-content");
+            })
+        });
+    </script>
+    <style>
+        * {margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        
+        
+        }
+        .mySlides1, .mySlides2 {display: none}
+        img {vertical-align: middle;}
+        
+        /* Slideshow container */
+        .slideshow-container {
+          max-width: 1000px;
+          position: relative;
+          margin: auto;
+        }
+        
+        /* Next & previous buttons */
+        .prev, .next {
+            /* background-image: linear-gradient(rgb(86, 86, 137), rgb(120, 120, 158), rgb(76, 76, 121)); */
+          cursor: pointer;
+          position: absolute;
+          top: 50%;
+          width: auto;
+          padding: 16px;
+          margin-top: -22px;
+          color: white;
+          font-weight: bold;
+          font-size: 18px;
+          transition: 0.6s ease;
+          border-radius: 0 3px 3px 0;
+          user-select: none;
+        }
+        
+        /* Position the "next button" to the right */
+        .next {
+          right: 0;
+          border-radius: 3px 0 0 3px;
+        }
+        
+        /* On hover, add a grey background color */
+        .prev:hover, .next:hover {
+          background-color: #f1f1f1;
+          color: black;
+        }
+        .prev1, .next2 {
+            /* background-image: linear-gradient(rgb(86, 86, 137), rgb(120, 120, 158), rgb(76, 76, 121)); */
+          cursor: pointer;
+          position: absolute;
+          top: 0px;
+          width: auto;
+          padding: 16px;
+          margin-top: -250px;
+          color: white;
+          font-weight: bold;
+          font-size: 18px;
+          transition: 0.6s ease;
+          border-radius: 0 3px 3px 0;
+          user-select: none;
+          
+        }
+        .next2 {
+          right: 0;
+          border-radius: 3px 0 0 3px;
+          /* position: absolute; */
+          /* left: 1000px; */
+        }
+        h2{
+            font-size: 3em;
+            text-decoration-line: underline;
+            /* text-decoration: dotted; */
+        }
+        #link1{
+        font-size: xx-large;
+        width: 20px;
+        /* height: 20px; */
+        margin-top: 50px;
+        }
+        #link1:hover{
+            /* background-color: burlywood; */
+            box-shadow: 3px 3px 3px burlywood;
+            background-size: cover;
+            /* color: aqua; */
+
+        }
+        #link2{
+            font-size: xx-large;
+            margin-left: 1480px;
+
+        }
+        #link2:hover{
+            box-shadow: 3px 3px 3px burlywood;
+            background-color: antiquewhite;
+        }
+        </style>
+        
+</head>
+<body>
+    <h2 style="text-align:center " ><i><b>Images</b></i></h2>
+    <a href="about.html" id="link1"><img src="leftA.png"  width="25px"></a><a href="testimonials.html" id="link2"><img src="rightA.png" width="25px"></a>
+
+
+<p style="font-size: 3em;">Our Foods</p>
+<div class="slideshow-container">
+  <div class="mySlides1">
+    <img src="shawarma.jpg" style="width:100%" height="500px">
+  </div>
+
+  <div class="mySlides1">
+    <img src="cheese-taco.jpg" style="width:100%" height="500px">
+  </div>
+
+  <div class="mySlides1">
+    <img src="chili-patato.jpg" style="width:100%" height="500px">
+  </div>
+  <div class="mySlides1">
+    <img src="pancakes.jpg" style="width:100%" height="500px">
+  </div>
+
+  <div class="mySlides1">
+    <img src="chole-bhatura.jpg" style="width:100%" height="500px">
+  </div>
+
+  <div class="mySlides1">
+    <img src="kabab.jpg" style="width:100%" height="500px">
+  </div>
+  <div class="mySlides1">
+    <img src="Sandwich.jpg" style="width:100%" height="500px">
+  </div>
+
+  <div class="mySlides1">
+    <img src="dosa.jpg" style="width:100%" height="500px">
+  </div>
+
+  <div class="mySlides1">
+    <img src="italian-pasta.jpg" style="width:100%" height="500px">
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+</div>
+
+<p style="font-size: 3em;">Our View</p>
+<div class="slideshow-container">
+  <div class="mySlides2">
+    <img src="loc1.jpg" style="width:100%"  height="500px">
+  </div>
+
+  <div class="mySlides2">
+    <img src="loc2.jpg" style="width:100%" height="500px">
+  </div>
+
+  <div class="mySlides2">
+    <img src="loc3.jpg" style="width:100%" height="500px">
+  </div>
+  <div class="slideshow-container">
+    <div class="mySlides2">
+      <img src="loc4.jpg" style="width:100%" height="500px">
+    </div>
+  
+    <div class="mySlides2">
+      <img src="loc5.jpg" style="width:100%" height="500px">
+    </div>
+  
+    <div class="mySlides2">
+      <img src="loc6.jpg" style="width:100%" height="500px">
+    </div>
+    <div class="slideshow-container">
+        <div class="mySlides2">
+          <img src="loc7.jpg" style="width:100%" height="500px">
+        </div>
+      
+        <div class="mySlides2">
+          <img src="loc8.jpg" style="width:100%" height="500px">
+        </div>
+      
+        <div class="mySlides2">
+          <img src="loc9.jpg" style="width:100%" height="500px">
+        </div>
+
+  <a class="prev1" onclick="plusSlides(-1, 1)">&#10094;</a>
+  <a class="next2" onclick="plusSlides(1, 1)">&#10095;</a>
+</div>
+<script>
+    let slideIndex = [1,1];
+    let slideId = ["mySlides1", "mySlides2"]
+    showSlides(1, 0);
+    showSlides(1, 1);
+    
+    function plusSlides(n, no) {
+      showSlides(slideIndex[no] += n, no);
+    }
+    
+    function showSlides(n, no) {
+      let i;
+      let x = document.getElementsByClassName(slideId[no]);
+      if (n > x.length) {slideIndex[no] = 1}    
+      if (n < 1) {slideIndex[no] = x.length}
+      for (i = 0; i < x.length; i++) {
+         x[i].style.display = "none";  
+      }
+      x[slideIndex[no]-1].style.display = "block";  
+    }
+    </script>
+    
+</body>
+</html>
